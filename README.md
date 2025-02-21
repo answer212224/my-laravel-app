@@ -1,66 +1,85 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# My Laravel App
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 簡介
+**My Laravel App** 是一個基於 Laravel 10 和 Vue 3 的現代化 Web 應用程式，結合了 Vuetify 作為 UI 組件庫。此專案旨在提供一個完整的全端開發範例，展示如何整合 Laravel 的後端功能與 Vue.js 的前端靈活性，以及使用 Vuetify 快速構建美觀的使用者介面。
 
-## About Laravel
+## 功能特性
+- **前後端分離**：使用 Laravel 作為後端 API，Vue 3 作為前端框架，實現清晰的前後端分離架構。
+- **UI 組件庫**：整合 Vuetify，提供豐富且美觀的 UI 元件，提升開發效率。
+- **現代化開發流程**：使用 Vite 進行資源編譯與熱更新，加速開發流程。
+- **認證系統**：內建使用者註冊、登入功能，並使用 Laravel Sanctum 進行 API 認證。
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 環境需求
+- **PHP**：8.1 或以上版本
+- **Node.js**：16 或以上版本
+- **資料庫**：MySQL 8.0 或以上版本（或其他相容的資料庫）
+- **Composer**：PHP 的套件管理工具
+- **NPM**：Node.js 的套件管理工具
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 安裝與設定
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 1. 克隆專案
+```bash
+git clone https://github.com/answer212224/my-laravel-app.git
+cd my-laravel-app
+```
 
-## Learning Laravel
+### 2. 安裝後端相依套件
+```bash
+composer install
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 3. 安裝前端相依套件
+```bash
+npm install
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 4. 設定環境變數
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+根據需要修改 `.env` 文件中的資料庫連線資訊和其他設定。
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 5. 執行資料庫遷移
+```bash
+php artisan migrate
+```
 
-## Laravel Sponsors
+### 6. 編譯前端資源
+```bash
+npm run build
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 7. 啟動開發伺服器
+```bash
+php artisan serve
+```
+伺服器將在 `http://127.0.0.1:8000` 運行。
 
-### Premium Partners
+## 部署
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### 1. 環境準備
+確保伺服器上已安裝所需的 PHP、Node.js、資料庫等環境，並已配置好網域與 SSL 憑證。
 
-## Contributing
+### 2. 部署流程
+- 將專案代碼上傳至伺服器。
+- 執行 `composer install` 安裝後端相依套件。
+- 執行 `npm install` 安裝前端相依套件。
+- 設定環境變數，確保 `.env` 文件中的設定正確。
+- 執行資料庫遷移：`php artisan migrate --force`
+- 編譯前端資源：`npm run build`
+- 設定伺服器的 Web 根目錄指向專案的 `public` 目錄。
+- 確保正確設定檔案權限，讓伺服器能夠讀寫必要的目錄。
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 測試
+使用 Laravel 提供的測試工具進行測試：
+```bash
+php artisan test
+```
 
-## Code of Conduct
+## 貢獻
+歡迎對本專案提出建議、回報問題或提交 Pull Request。在提交前，請確保您的代碼符合專案的編碼風格，並通過所有測試。
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 授權
+此專案採用 MIT 授權。
