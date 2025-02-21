@@ -50,7 +50,7 @@ php artisan migrate
 
 ### 6. 編譯前端資源
 ```bash
-npm run build
+npm run dev
 ```
 
 ### 7. 啟動開發伺服器
