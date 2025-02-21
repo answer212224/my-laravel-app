@@ -3,6 +3,8 @@
 ## 簡介
 **My Laravel App** 是一個基於 Laravel 10 和 Vue 3 的現代化 Web 應用程式，結合了 Vuetify 作為 UI 組件庫。此專案旨在提供一個完整的全端開發範例，展示如何整合 Laravel 的後端功能與 Vue.js 的前端靈活性，以及使用 Vuetify 快速構建美觀的使用者介面。
 
+📖 相關文章：[使用 Laravel 10 與 Vue 3 + Vuetify 建立現代化 Web 應用](https://ithelp.ithome.com.tw/articles/10359764)
+
 ## 功能特性
 - **前後端分離**：使用 Laravel 作為後端 API，Vue 3 作為前端框架，實現清晰的前後端分離架構。
 - **UI 組件庫**：整合 Vuetify，提供豐富且美觀的 UI 元件，提升開發效率。
